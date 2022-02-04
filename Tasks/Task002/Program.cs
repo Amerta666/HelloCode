@@ -12,8 +12,8 @@ if (FirstNumber > SecondNumber)
 }
 else 
 {
-    Console.Write(second_number); 
+    Console.Write(SecondNumber); 
     Console.WriteLine(" является большим числом");
-    Console.Write(first_number); 
+    Console.Write(FirstNumber); 
     Console.Write(" является меньшим");
 }
