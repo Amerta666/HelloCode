@@ -1,8 +1,12 @@
 ﻿// 2. Даны два числа. Показать большее и меньшее число
-string sa = Console.ReadLine();
-string sb = Console.ReadLine();
-int  FirstNumber = int.Parse(sa);
-int SecondNumber = int.Parse(sb);
+Console.WriteLine("Введите два числа");
+
+string fn = Console.ReadLine();
+string sn = Console.ReadLine();
+
+int FirstNumber = int.Parse(fn);
+int SecondNumber = int.Parse(sn);
+
 if (FirstNumber > SecondNumber) 
 { 
     Console.Write(FirstNumber); 
