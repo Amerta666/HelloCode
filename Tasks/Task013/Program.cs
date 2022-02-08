@@ -1,15 +1,7 @@
 ﻿// 13. Выяснить, кратно ли число заданному, если нет, вывести остаток.
 using static System.Console;
 
-//int FirstNumber = new Random().Next(100, 1000);
-//WriteLine(FirstNumber);
-//int SecondNumber = new Random().Next(10, 100);
-//WriteLine(SecondNumber);
-//int result = FirstNumber / SecondNumber;
-
-//WriteLine(result); 
-
-// Проверка ввода числа (Если на вооде ввели не число например, а текст)
+// Проверка ввода числа (Если на вводе ввели не число например, а текст)
 int a1 = 0;
 int a2 = 0;
 

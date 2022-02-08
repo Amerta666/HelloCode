@@ -1,7 +1,7 @@
 ﻿// // // Вид 1. Описание
 void Method1() 
 {
-    Console.WriteLine("Автор ...");
+    //Console.WriteLine("Автор ...");
 }
 // Вызов
 Method1();
@@ -9,7 +9,7 @@ Method1();
 // // // Вид2. Описание
 void Method2(string msg)
 {
-    Console.WriteLine(msg);
+    //Console.WriteLine(msg);
 }
 // Вызов
 Method2(msg: "Текст сообщения");
@@ -20,13 +20,13 @@ void Method21(string msg, int count)
     int i = 0;
     while (i < count)
     {
-        Console.WriteLine(msg);
+        //Console.WriteLine(msg);
         i++;
     }
 }
 // Вызов
-Method21(msg: "Текст", count: 4);
-Method21(count: 4, msg: "новый текст");
+//Method21(msg: "Текст", count: 4);
+//Method21(count: 4, msg: "новый текст");
 
 
 // // // Вид 3. Описание
@@ -64,7 +64,7 @@ string Method4(int count, string text)
 }
 
 string res = Method4(10, "z");
-Console.WriteLine(res);
+//Console.WriteLine(res);
 
 //for 
 // // // for (int i = 2; i <= 10; i++)
@@ -109,10 +109,10 @@ string Replace(string text, char oldValue, char newValue)
 
 string newText = Replace(text, ' ', '|');
 
-Console.WriteLine(newText);
-Console.WriteLine();
+//Console.WriteLine(newText);
+//Console.WriteLine();
 newText = Replace(newText, 'к', 'К');
-Console.WriteLine(newText);
+//Console.WriteLine(newText);
 
 // Сортировка одномерного массива
 int[] arr = { 1, 5, 4, 3, 2, 6, 7, 1, 1 };
@@ -145,7 +145,7 @@ void SelectionSort(int[] array)
 }
 
 
-PrintArray(arr);
+//PrintArray(arr);
 SelectionSort(arr);
 
 PrintArray(arr);
