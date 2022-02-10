@@ -2,11 +2,12 @@
 
 using static System.Console;
 
-int A = int.Parse(ReadLine());
+WriteLine("Введите число");
+int A = int.Parse(ReadLine());                
 int sum = 1;
 for (int i = 2; i <= A; i++)
 {   
-    sum = i + sum;
+    sum = i + sum;                          
     WriteLine($"{sum - i} + {i} = {sum}");
 
 }
