@@ -1,2 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Задать массив из 8 элементов и вывести их на экран 
+using static System.Console;
+
+int[] MyArray = new int[8];
+
+for (int i = 0; i < MyArray.Length; i++)
+{
+    MyArray[i] = new Random().Next(1000);
+    WriteLine(MyArray[i]);
+}
