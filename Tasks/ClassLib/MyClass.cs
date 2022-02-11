@@ -1,15 +1,16 @@
-﻿using static System.Console;
-namespace ClassLib;
+﻿namespace ClassLib;
 public class MyClass
 {
-    public static void PrintArray(int[] array)
+        pubic static int[] GetArray(int size)
     {
-    int count = array.Length;
+        int[] arr = new int[size];
+        for (int i = 0; i < arr.size; i++)
+        {
+        arr[i] = new Random().Next(10, 100);
+        }
+        return arr;
+    }
 
-    for (int i = 0; i < count; i++)
-    {
-        Write($"{array[i]} ");
-    }
-    WriteLine();
-    }
+
+    
 }
