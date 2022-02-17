@@ -1,2 +1,3 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// 35. Определить, присутствует ли в заданном массиве, некоторое число 
+
+using static System.Console;
