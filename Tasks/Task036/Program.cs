@@ -3,22 +3,22 @@
 
 using static System.Console;
 
-WriteLine("Enter the number of numbers in the array");
+WriteLine("Vvedite razmer massiva");
 int N = int.Parse(ReadLine());
 int[] arr = new int[N];
-int even = 0;
-int odd = 0;
+int chetnie = 0;
+int neChetnie = 0;
 for (int i = 0; i < arr.Length; i++)
 {
     arr[i] = new Random().Next(100, 999);
 }
-WriteLine("Given an array ");
+WriteLine("Poluchaem massiv ");
 WriteLine(String.Join(" ",arr));
 
 for (int i = 0; i < arr.Length; i++)
 {
-    if (arr[i] % 2 == 0) even++; 
-    else odd++;
+    if (arr[i] % 2 == 0) chetnie++; 
+    else neChetnie++;
 }
-WriteLine($"Number of even numbers - " + even);
-WriteLine($"Number of odd numbers - " + odd);
+WriteLine($"Kolichestvo chetnih - " + chetnie);
+WriteLine($"Kolichestvo neChetnih - " + neChetnie);
