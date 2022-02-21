@@ -4,13 +4,14 @@ using static System.Console;
 
 int a = int.Parse(ReadLine());
 
-int i, b;   
-while(a !=0 )
-{   b = a%2;  
-    WriteLine(b);  
-    a = a/2;  
-}  
-
+int b;
+string otvet = string.Empty;
+while (a != 0)
+{
+    otvet = (a % 2).ToString() + otvet;
+    a = a / 2;
+}
+WriteLine(otvet);
 
 
 
