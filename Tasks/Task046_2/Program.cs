@@ -10,19 +10,29 @@
 using static System.Console;
 using System.Linq;
 
-WriteLine("Vvedite koefficient mashtabirovaniya figuri");
-int k = int.Parse(ReadLine());
+Point[] points = new Point[100];
 
-Point p1 = new Point() { X = 2, Y = 2 };
-Point p2 = new Point() { X = 22, Y = 2 };
-Point p3 = new Point() { X = 22, Y = 22 };
-Point p4 = new Point() { X = 2, Y = 22 };
+int i = 0;
+int count = 1;
+do
+{
+    WriteLine("Vvedite koordinati tochek cherez zapyatuyu");
+    string[] point = ReadLine().Split(',');
+    points[i] = new Point() { X = int.Parse(point[0]), Y = int.Parse(point[1]) };
+    i++;
+    count++;
+}
+while (count < 5);
 
-Point K = Point p1(X, Y) * k;
-WriteLine();
+//WriteLine("Vvedite kooficient masshtabirovaniya");
+//int k = int.Parse(ReadLine());
 
-//MyStruct min = сityTemp.First(x=>x.Temp==сityTemp.Min(c=>c.Temp));
-//MyStruct max = сityTemp.First(x=>x.Temp==сityTemp.Max(c=>c.Temp));
+//Point p1 = points;
+// Point Y = сityY.First(x=>x.Temp==сityY.Max(c=>c.Y));
+// WriteLine($"Самый холодный город {min.X} {min.Y}");
+// WriteLine($"Самый тёплый город {max.X} {max.Y}");
+WriteLine(Point[X,Y]);
+
 
 struct Point
 {
