@@ -1,5 +1,14 @@
 ﻿using static System.Console;
 using ClassLib;
 
-string s = Convert.ToString(10,2);
-Write(s);
+string username = ReadLine();
+
+if(username == "МАША")
+{
+    Console.WriteLine("Ура, это же Маша");
+}
+else
+{
+    Console.Write("Привет, ");
+    Console.WriteLine(username);
+}
