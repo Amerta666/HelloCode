@@ -7,38 +7,58 @@ using static System.Console;
 
 Clear();
 
-WriteLine("Vvedite m");
-int m = int.Parse(ReadLine());
-WriteLine("Vvedite n");
-int n = int.Parse(ReadLine());
-
-if (m != n)
+int[,] FillArray(int rowsToFill, int columnsToFill)
 {
-    WriteLine("Matriza ne kvadrataya");
+    Random rand = new Random();
+    int[,] tempArray = new int[rowsToFill, columnsToFill];
+
+    for (int i = 0; i < rowsToFill; i++)
+    {
+        for (int j = 0; j < columnsToFill; j++)
+        {
+            tempArray[i, j] = rand.Next(0, 10);
+        }
+    }
+    return tempArray;
+}
+
+void ShowArray(int[,] inputArray)
+{
+    for (int i = 0; i < inputArray.GetLength(0); i++)
+    {
+        for (int j = 0; j < inputArray.GetLength(1); j++)
+        {
+            Write($"{inputArray[i, j]} ");
+        }
+        WriteLine();
+    }
+}
+
+WriteLine("Zadaite razmer dvumernogo massiva m*n");
+Write("stroki m = ");
+int rows = int.Parse(ReadLine());
+Write("stolbci n = ");
+int columns = int.Parse(ReadLine());
+
+if (rows != columns)
+{
+    WriteLine("Vipolnenie nevozmozhno, m <> n");
     return;
 }
 
-int[,] matrix = new int[m, n];
-int temp = 0;
+int[,] arrayA = FillArray(rows, columns);
+WriteLine("Ishodnaya matrica");
+ShowArray(arrayA);
 
-for (int i = 0; i < matrix.GetLength(0); i++)
+for (int i = 0; i < arrayA.GetLength(0); i++)
 {
-    for (int j = 0; j < matrix.GetLength(1); j++)
+    for (int j = i + 1; j < arrayA.GetLength(1); j++)
     {
-        matrix[i, j] = new Random().Next(100);
-        Write($"{matrix[i, j]} ");
+        int temp = arrayA[i,j];
+        arrayA[i,j] = arrayA[j,i];
+        arrayA[j,i] = temp;
     }
-    WriteLine();
 }
 
-for (int i = 0; i < matrix.GetLength(0); i++)
-{
-    for (int j = 0; j < matrix.GetLength(1); j++)
-    {
-        temp =   matrix[i , j];
-        matrix[i,j] = matrix[j,i];
-        matrix[j,i] = temp;
-        Write($"{matrix[i, j]} ");
-    }
-    WriteLine();
-}
+WriteLine("Transport matrix");
+ShowArray(arrayA);

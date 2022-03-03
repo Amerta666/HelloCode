@@ -23,7 +23,8 @@ int lastInd = arr.Length - 1;
 int firstInd = 0;;
 int temp = 0;                                     
 while (firstInd < lastInd)
-{   temp = arr[firstInd];
+{   
+    temp = arr[firstInd];
     arr[firstInd] = arr[lastInd];
     arr[lastInd] = temp;
     firstInd++;

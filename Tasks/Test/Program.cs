@@ -1,14 +1,23 @@
-﻿using static System.Console;
+﻿// Игра в пирамидки
+
+using static System.Console;
 using ClassLib;
 
-string username = ReadLine();
+int[] array = { 10, 2, 1, 3, 8, 9, 18, 43 };
 
-if(username == "МАША")
+for (int i = 0; i < array.Length - 1; i++)
 {
-    Console.WriteLine("Ура, это же Маша");
+    int minPosition = i;
+    for (int j = i + 1; j < array.Length; j++)
+    {
+        if (array[j] > array[minPosition])
+        {
+            minPosition = j;
+        }
+    }
+    int temporary = array[i];
+    array[i] = array[minPosition];
+    array[minPosition] = temporary;
 }
-else
-{
-    Console.Write("Привет, ");
-    Console.WriteLine(username);
-}
+
+WriteLine(String.Join(" ", array));
